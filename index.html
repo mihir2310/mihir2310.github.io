@@ -147,6 +147,30 @@
             transform: translateY(-3px);
         }
 
+        .hero-description {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 0 2rem;
+        }
+
+        .hero-description p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .hero-description a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .hero-description a:hover {
+            text-decoration: underline;
+        }
+
         /* Projects Section */
         .projects {
             padding: 5rem 0;
@@ -204,6 +228,57 @@
             font-weight: 500;
         }
 
+        /* Publications Section */
+        .publications {
+            padding: 5rem 0;
+            background-color: var(--bg-color);
+        }
+
+        .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+
+        .publication-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .publication-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .publication-content {
+            padding: 1.5rem;
+        }
+
+        .publication-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .publication-description {
+            margin-bottom: 1rem;
+        }
+
+        .publication-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .publication-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
         /* Skills Section */
         .skills {
             padding: 5rem 0;
@@ -241,6 +316,13 @@
             background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             border-radius: 4px;
             transition: width 1s ease-in-out;
+        }
+
+        .skill-details {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-color);
+            opacity: 0.8;
         }
 
         /* Resume Section */
@@ -377,6 +459,16 @@
                 <a href="https://github.com/mihir2310" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="mailto:xmm2dp@virginia.edu"><i class="far fa-envelope"></i></a>
             </div>
+            <div class="hero-description">
+                <p>Hey! My name is Mihir. I am a student at the University of Virginia majoring in mathematics and computer science!</p>
+                <p>I like solving difficult problems and am particularly interested in those at the intersection of Mathematics, Computer Science, and Quantitative Finance.</p>
+                <p>I am currently interning as a full-stack developer at sleep-technology startup, Percy. I am also conducting High-Performance Computing Research at UVA working to accelerate parallel computing processes by building <a href="https://cylondata.org/">CylonPlus.</a></p>
+                <p>Previously, I interned as a Data Engineer at <a href="https://premise.com/">Premise</a> optimizing data pipelines.</p>
+                <p>Before that, I worked as a Machine Learning Research Intern at George Mason University building <a href="https://doi.org/10.13021/jssr2020.3154">SVM classifiers to identify partial epileptic seizures.</a></p>
+                <p>I've trained and tested neural-networks over dual-class share data over historical data to identify <a href="https://github.com/mihir2310/Dual-Class_Arbitrage">optimal trading strategies.</a></p>
+                <p>I am involved in my school's Intercollegiate Programming Contest, Poker, and Men's Squash team.</p>
+                <p>In my free-time, I love to solve problems on <a href="https://leetcode.com/mihir2310/">LeetCode</a>, work out, and listen to music.</p>
+            </div>
         </div>
     </section>
 
@@ -387,19 +479,19 @@
             <div class="projects-grid">
                 <div class="project-card animate">
                     <div class="project-content">
-                        <h3 class="project-title">CylonPlus</h3>
-                        <p class="project-description">High-Performance Computing Research at UVA working to accelerate parallel computing processes.</p>
+                        <h3 class="project-title">ResumeRescue</h3>
+                        <p class="project-description">An AI-powered resume analysis tool that helps job seekers optimize their resumes for specific job descriptions. Features OCR for text extraction from job description images and provides personalized recommendations for resume improvement.</p>
                         <div class="project-links">
-                            <a href="https://cylondata.org/" target="_blank">View Project</a>
+                            <a href="https://github.com/mihir2310/ResumeRescue" target="_blank">View Project</a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card animate">
                     <div class="project-content">
-                        <h3 class="project-title">Epileptic Seizure Detection</h3>
-                        <p class="project-description">Built SVM classifiers to identify partial epileptic seizures using machine learning techniques.</p>
+                        <h3 class="project-title">InfrastructureReport</h3>
+                        <p class="project-description">A whistleblower platform allowing users to report infrastructure issues in their community. Built with Django, featuring real-time reporting, location tracking, and admin dashboard for issue management.</p>
                         <div class="project-links">
-                            <a href="https://doi.org/10.13021/jssr2020.3154" target="_blank">View Research</a>
+                            <a href="https://github.com/uva-cs3240-s24/project-b-19" target="_blank">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -409,6 +501,24 @@
                         <p class="project-description">Trained and tested neural networks over dual-class share data to identify optimal trading strategies.</p>
                         <div class="project-links">
                             <a href="https://github.com/mihir2310/Dual-Class_Arbitrage" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <div class="publications-grid">
+                <div class="publication-card animate">
+                    <div class="publication-content">
+                        <h3 class="publication-title">Epileptic Seizure Detection using SVM Classifiers</h3>
+                        <p class="publication-description">Research paper on building SVM classifiers to identify partial epileptic seizures using machine learning techniques.</p>
+                        <div class="publication-links">
+                            <a href="https://doi.org/10.13021/jssr2020.3154" target="_blank">View Publication</a>
                         </div>
                     </div>
                 </div>
@@ -426,24 +536,28 @@
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 90%"></div>
                     </div>
+                    <p class="skill-details">Python, Java, C++, JavaScript, TypeScript, SQL, HTML/CSS</p>
                 </div>
                 <div class="skill-card animate">
-                    <h3 class="skill-title">Machine Learning</h3>
+                    <h3 class="skill-title">Machine Learning & Data Science</h3>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 85%"></div>
                     </div>
+                    <p class="skill-details">TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, OpenCV, Tesseract OCR</p>
                 </div>
                 <div class="skill-card animate">
-                    <h3 class="skill-title">Data Engineering</h3>
+                    <h3 class="skill-title">Web Development</h3>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 80%"></div>
                     </div>
+                    <p class="skill-details">Django, React, Node.js, Express, REST APIs, GraphQL, AWS</p>
                 </div>
                 <div class="skill-card animate">
                     <h3 class="skill-title">High-Performance Computing</h3>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 75%"></div>
                     </div>
+                    <p class="skill-details">MPI, OpenMP, CUDA, Parallel Computing, Distributed Systems</p>
                 </div>
             </div>
         </div>
